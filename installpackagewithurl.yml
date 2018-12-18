@@ -1,0 +1,10 @@
+---
+- name: Install Package
+  hosts: all
+  vars: 
+    package_name: httpd
+    url: http://localhost:8080/
+
+  tasks:
+  - name: install package
+    yum: name={{ package_name }} state=present
